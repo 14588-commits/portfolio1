@@ -1,31 +1,28 @@
-# My Portfolio
+# My Portfolio (เวอร์ชันเรียบง่าย)
 
-เว็บไซต์ Portfolio ส่วนตัว 8 หน้า สร้างด้วย HTML / CSS / JavaScript ล้วน (ไม่ต้องใช้ framework) พร้อม deploy บน GitHub Pages
+เว็บไซต์ Portfolio ส่วนตัว 8 หน้า สร้างด้วย HTML + CSS ล้วน (ไม่มี JavaScript ซับซ้อน) พร้อม deploy บน GitHub Pages
 
 ## โครงสร้างไฟล์
 
 ```
-portfolio/
+portfolio-simple/
 ├── index.html          หน้าแรก
-├── about.html           เกี่ยวกับฉัน
-├── education.html       ประวัติการศึกษา
-├── activities.html      กิจกรรม
-├── projects.html        ผลงาน
-├── awards.html          รางวัลและใบประกาศ
-├── skills.html          ทักษะ
-├── contact.html         ติดต่อ
-├── README.md
-└── assets/
-    ├── css/style.css     สไตล์ทั้งหมด (แก้สีธีมได้ที่ :root)
-    ├── js/main.js        เมนูนำทาง (แก้ชื่อ/ลำดับเมนูได้ที่ตัวแปร PAGES)
-    └── img/              ใส่รูปภาพของคุณที่นี่
+├── about.html           About Me
+├── education.html       Education
+├── activities.html      Activities
+├── projects.html        Projects
+├── awards.html          Awards & Certificates
+├── skills.html          Skills
+├── contact.html         Contact
+├── style.css            สไตล์ทั้งหมด (ไฟล์เดียวใช้ร่วมกันทุกหน้า)
+└── README.md
 ```
 
 ## วิธีแก้ไขเนื้อหา
-เปิดไฟล์ `.html` แต่ละหน้าด้วยโปรแกรมแก้โค้ด (เช่น VS Code) แล้วแทนที่ข้อความในวงเล็บเหลี่ยม `[ ]` ด้วยข้อมูลจริงของคุณ เช่น `[ชื่อโปรเจกต์ที่ 1]`
+เปิดไฟล์ `.html` แต่ละหน้าด้วยโปรแกรมแก้โค้ด (เช่น VS Code) แล้วแทนที่ข้อความในวงเล็บเหลี่ยม `[ ]` ด้วยข้อมูลจริงของคุณ
 
-## วิธีเพิ่ม/แก้เมนู
-เมนูด้านซ้าย (binder tabs) ถูกสร้างจากไฟล์เดียวคือ `assets/js/main.js` — แก้ที่ตัวแปร `PAGES` เพียงที่เดียว ทุกหน้าจะอัปเดตอัตโนมัติ
+## วิธีแก้เมนู
+เมนูด้านบน (`<nav class="navbar">`) เขียนซ้ำอยู่ในทุกไฟล์ — ถ้าจะเพิ่ม/แก้/ลบเมนู ต้องแก้ให้ครบทั้ง 8 ไฟล์ และอย่าลืมเปลี่ยน `class="active"` ให้ตรงกับหน้าปัจจุบันของแต่ละไฟล์
 
 ## วิธี Deploy ด้วย GitHub Pages
 
@@ -44,10 +41,8 @@ portfolio/
 5. เลือก branch **main** และ folder **/ (root)** แล้วกด **Save**
 6. รอสักครู่ เว็บไซต์จะขึ้นที่ `https://<username>.github.io/<repo>/`
 
-> เคล็ดลับ: ถ้าตั้งชื่อ repo เป็น `<username>.github.io` เว็บจะ deploy อัตโนมัติที่ root domain โดยไม่ต้องตั้งค่า Pages เพิ่ม
-
 ## สิ่งที่ควรทำต่อ
-- [ ] ใส่รูปโปรไฟล์และรูปผลงานในโฟลเดอร์ `assets/img/`
 - [ ] แก้ข้อความในวงเล็บเหลี่ยม `[ ]` ทุกหน้าให้เป็นข้อมูลจริง
 - [ ] ใส่ลิงก์ GitHub repo ของแต่ละโปรเจกต์ในหน้า `projects.html`
-- [ ] ทดสอบเว็บบนมือถือ (ปุ่ม MENU จะปรากฏเมื่อจอแคบกว่า 760px)
+- [ ] ใส่อีเมล/โซเชียลจริงในหน้า `contact.html`
+- [ ] ทดสอบเว็บบนมือถือ

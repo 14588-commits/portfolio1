@@ -1,0 +1,178 @@
+/* ============================
+   style.css — สไตล์หลักของเว็บ
+   ใช้ไฟล์นี้ไฟล์เดียวกับทุกหน้า
+   ============================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Sarabun", sans-serif;
+  color: #333;
+  background: #ffffff;
+  line-height: 1.6;
+}
+
+/* ---------- เมนูด้านบน ---------- */
+.navbar {
+  background: linear-gradient(135deg, #2c3e50, #34495e);
+  padding: 16px 24px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.navbar .logo {
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.navbar a {
+  color: #ecf0f1;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  color: #3498db;
+  text-decoration: underline;
+}
+
+/* ---------- เนื้อหาหลัก ---------- */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* ---------- หัวหน้า (Hero) ---------- */
+.hero {
+  background: linear-gradient(135deg, #eaf3fb, #ffffff);
+  border-radius: 8px;
+  padding: 32px 28px;
+  margin-bottom: 10px;
+}
+
+/* ---------- ป้ายแท็กเล็กๆ ---------- */
+.tag {
+  display: inline-block;
+  background: #eaf3fb;
+  color: #2980b9;
+  font-size: 0.78rem;
+  padding: 3px 10px;
+  border-radius: 20px;
+  margin: 0 6px 6px 0;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #2c3e50;
+  margin-bottom: 12px;
+}
+
+h2 {
+  font-size: 1.4rem;
+  color: #2c3e50;
+  margin: 30px 0 14px;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 6px;
+}
+
+p {
+  margin-bottom: 12px;
+}
+
+/* ---------- ปุ่ม ---------- */
+.btn {
+  display: inline-block;
+  background: #3498db;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.btn:hover {
+  background: #2980b9;
+}
+
+/* ---------- การ์ด ---------- */
+.card {
+  background: #f8f9fa;
+  border: 1px solid #e0e0e0;
+  border-left: 4px solid #3498db;
+  border-radius: 6px;
+  padding: 18px 20px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+/* ---------- ตาราง ---------- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th, td {
+  text-align: left;
+  padding: 10px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+th {
+  background: #f0f0f0;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #888;
+  font-size: 0.85rem;
+  border-top: 1px solid #e0e0e0;
+  margin-top: 30px;
+}
+
+/* ---------- มือถือ ---------- */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbar ul {
+    gap: 12px;
+    margin-top: 10px;
+  }
+}
